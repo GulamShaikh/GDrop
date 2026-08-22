@@ -2,3 +2,5 @@ fastapi
 uvicorn
 python-multipart
 pytest
+qrcode
+pillow
