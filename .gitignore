@@ -1,7 +1,7 @@
 # Android Build Artifacts
 android/GDrop/.gradle/
 android/GDrop/.idea/
-android/GDrop/app/build/
+android/GDrop/**/build/
 android/GDrop/local.properties
 *.apk
 *.apks
@@ -27,11 +27,12 @@ env/
 .DS_Store
 *.iml
 
-# Database Files (if these are runtime artifacts)
+# Database / Runtime Files
 *.db
-
-# Received directory (assumed to be runtime/downloaded files)
 received/
+
+# Logs
+*.log
 
 # Build outputs
 build/
