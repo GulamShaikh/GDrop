@@ -1,0 +1,44 @@
+# Android Build Artifacts
+android/GDrop/.gradle/
+android/GDrop/.idea/
+android/GDrop/app/build/
+android/GDrop/local.properties
+*.apk
+*.apks
+*.aab
+*.aar
+
+# Python Cache
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+venv/
+env/
+.Python
+
+# IDE Files
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+*.iml
+
+# Database Files (if these are runtime artifacts)
+*.db
+
+# Received directory (assumed to be runtime/downloaded files)
+received/
+
+# Build outputs
+build/
+dist/
+*.o
+*.so
+
+# OS Files
+Thumbs.db
+.Thumbs.db

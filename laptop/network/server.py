@@ -478,6 +478,7 @@ def list_files():
                 items.append({
                     "name": file_path.name,
                     "size": file_path.stat().st_size,
+                  "download_url": f"/download/{file_path.name}",
                 })
         return {"files": items}
     except Exception as exc:  # pragma: no cover - defensive fallback
@@ -586,7 +587,14 @@ async def upload_file(file: UploadFile = File(...)):
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="A filename is required.")
 
     try:
-        destination = _safe_file_path(file.filename)
+        requested = _safe_file_path(file.filename)
+        destination = requested
+        index = 1
+        while destination.exists():
+          destination = requested.with_name(
+            f"{requested.stem} ({index}){requested.suffix}"
+          )
+          index += 1
     except HTTPException:
         raise
 

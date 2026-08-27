@@ -64,6 +64,13 @@
         android:text="Pair with laptop"
         android:layout_marginBottom="12dp" />
 
+    <androidx.camera.view.PreviewView
+        android:id="@+id/scannerPreview"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_marginBottom="12dp"
+        android:visibility="gone" />
+
     <Button
         android:id="@+id/refreshButton"
         android:layout_width="match_parent"
@@ -81,9 +88,15 @@
         android:id="@+id/transferName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Incoming transfer:"
+        android:text="Incoming Transfers"
         android:textStyle="bold"
         android:paddingTop="20dp" />
+
+    <LinearLayout
+        android:id="@+id/transferList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
 
     <TextView
         android:id="@+id/transferStatus"
